@@ -27,34 +27,33 @@
                 @grid: 10 /100vmax;
                 background: black;
             }
-            @shape: clover,5;
+            @shape: whale;
             background: coral;
-            @size:@rand(20,100)px;
-            transform: rotate(@rand(0, 180)deg );
+            @size:@rand(30,100)px;
+            transform: @rand(0, 180)deg ;
 
             animation-name: clover;
-            animation-duration: @rand(3, 10)s;
+            animation-duration: @rand(1, 10)s;
             animation-iteration-count:infinite;
             animation-delay: @rand(0, 10)s;
             animation-timing-function: linear;
             position: absolute;
 
-        
-            @place-cell: @rand(0,100)vw -100px;
+            @place-cell: -100px @rand(0,100)vh;            
             @keyframes clover {
                 0%{
-                    top: 0;
+                    left: 0;
                     opacity:1.0;
                 }
                 50%{
                     opacity:0.5;
-                    background:rgb(@rand(255,100), 86, 86);
+                    background:rgb(@rand(255,100), @rand(100,255), 86);
                 }
                 99.999%{
-                    top: 110vh;
+                    left: 110vw;
                 }
                 100%{
-                    top: 0;
+                    left: 0;
                     opacity:1.0;
                 }
             }

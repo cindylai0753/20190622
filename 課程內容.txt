@@ -3,3 +3,5 @@ vue.js
 node.js
 css.doodle
 css開發者大會---yotub
+
+https://blog.kdchang.cc/2016/12/21/javascript101-tutorial/
