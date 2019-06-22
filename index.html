@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #bg{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: fixed;
+            z-index: -1;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.7.1/css-doodle.min.js"></script>  
+    <div id="bg">
+        <css-doodle>
+            :doodle{
+                @grid: 10 /100vmax;
+                background: black;
+            }
+            @shape: clover,5;
+            background: coral;
+            @size:@rand(20,100)px;
+            transform: rotate(@rand(0, 180)deg );
+
+            animation-name: clover;
+            animation-duration: @rand(3, 10)s;
+            animation-iteration-count:infinite;
+            animation-delay: @rand(0, 10)s;
+            animation-timing-function: linear;
+            position: absolute;
+            @place-cell: @rand(0,100)vw -100px;
+
+            @keyframes clover {
+                0%{
+                    top: 0;
+                    opacity:1.0;
+                }
+                50%{
+                    opacity:0.5;
+                    background:rgb(@rand(255,100), 86, 86);
+                }
+                99.999%{
+                    top: 110vh;
+                }
+                100%{
+                    top: 0;
+                    opacity:1.0;
+                }
+            }
+        </css-doodle>
+    </div> 
+    <div id="content">
+        <h2 style="color: wheat;">css.doodle</h2>
+    </div>
+</body>
+</html>
